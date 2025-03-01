@@ -1,0 +1,14 @@
+{% extends "standardtemplate.html" %}
+
+{% block content %}
+   <div>
+      {% for m in movie %}
+         <p>{{m.name}}</p>
+         <p>{{m.release_date}}</p>
+         <p>{{m.actor}}</p>
+         <p>{{m.actress}}</p>
+         <p>{{m.language}}</p>
+         <p>{{m.rating}}</p>
+      {% endfor%}
+   </div>
+{% endblock %}

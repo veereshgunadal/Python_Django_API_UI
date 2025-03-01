@@ -1,0 +1,16 @@
+{% extends "standardtemplate.html" %}
+
+{% block title %}
+Get Movie
+{% endblock %}
+
+{% block content %}
+   <h2 align ="center">Enter movie to get details</h2>
+   <div>
+       <form action="/getmovie_result/" method="GET">
+           <label id = "name">Movie Name</label>
+           <input for = "name" type = "text" name = "name">
+           <input type = "submit">
+       </form>
+   </div>
+{% endblock %}

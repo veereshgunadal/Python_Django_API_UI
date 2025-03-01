@@ -1,0 +1,11 @@
+{% extends "standardtemplate.html" %}
+
+{% block content %}
+   <div>
+      <h2 align="center">Enter details to add movie</h2>
+      <form action="/addmovie_result/" method="POST">
+          {{form.as_p}}
+          <input type = "submit">
+      </form>
+   </div>
+{% endblock %}

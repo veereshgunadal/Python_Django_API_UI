@@ -16,7 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from app1 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('home/', views.home),
+    path('getmovie/', views.get_movie),
+    path('getmovie_result/', views.get_movie_result),
+    path('addmovie/', views.add_movie),
+    path('addmovie_result/', views.add_movie_result),
+    path('error/',views.not_found, name = "not_found"),
 ]
