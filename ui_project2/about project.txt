@@ -1,0 +1,10 @@
+ui_project
+ui_projectv1 - name = request.POST.get("name") 
+               dict = {name : name}
+               form = MoviesForm(dict)
+              each html form request field taking and forming one dictionary
+
+ui_project2 - above are similar just making html stylish 
+              imp updated in this is 
+              
+              form = MoviesForm(request.POST) - HTML form post request direct create form object and created database

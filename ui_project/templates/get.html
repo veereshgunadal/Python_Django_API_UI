@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<head>
+   <link rel="stylesheet" href="{% static "home.css" %}">
+</head>
+<head>
+</head>
+<body>
+   <h1>Enter the Roll Number to get student</h1>
+   <form action="results/" method="get">
+        <label id="roll_no">Roll No</label>
+        <input for="roll_no" type="text" name="roll_no"></input>
+
+        <label id="submit"></label>
+        <input for="submit" type="submit" value = "submit"></input>
+   </form>
+</body>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<head>
+   <link rel="stylesheet" href="{% static "home.css" %}">
+</head>
+<body>
+   <h1>To create enter below details</h1>
+   <form action="results/" method="post">
+        <label id ="name">Name : {{form.name}}</lable><br><br>
+        <label id ="roll_no">Roll No : {{form.roll_no}}</lable><br><br>
+        <label id ="age">Age : {{form.age}}</lable><br><br>
+        <label id ="addr">Addr : {{form.addr}}</lable><br><br>
+        <label id ="ph_no">Ph no : {{form.ph_no}}</lable><br><br>
+        <label id ="department">Department : {{form.department}}</lable><br><br>
+
+        <input type="submit" value = "submit">
+   </form>
+</body>

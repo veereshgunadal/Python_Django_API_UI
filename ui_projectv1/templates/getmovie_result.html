@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+   {% if res_data.code == "200" %}
+     <h4> code : {{code}} </h4>
+     <h4> message : {{message}} </h4>
+   {% else %}
+     <h4> name : {{name}} </h4>
+     <h4> release_date : {{release_date}} </h4>
+     <h4> actor : {{actor}} </h4>
+     <h4> actress : {{actress}} </h4>
+     <h4> language : {{language}} </h4>
+     <h4> rating : {{rating}} </h4>
+   {% endif %}
+</body>
