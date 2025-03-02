@@ -25,5 +25,13 @@ urlpatterns = [
     path('getmovie_result/', views.get_movie_result),
     path('addmovie/', views.add_movie),
     path('addmovie_result/', views.add_movie_result),
+    path('updatemovie/', views.update_movie),
+    path('updatingmovie/', views.updating_movie),
+    path('updatingmovie/<str:name>/', views.updating_movie),
+    path('updatemovie_result/<str:name>/', views.update_movie_result),
+    path('deletemovie/', views.delete_movie),
+    path('deletemovie_result/', views.delete_movie_result),
+    path('deletemovie_result/<str:name>/', views.delete_movie_result),
+    path('allmovie_result/', views.all_movie_result, name = "allmovie_result"),
     path('error/',views.not_found, name = "not_found"),
 ]

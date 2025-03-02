@@ -1,14 +1,33 @@
 {% extends "standardtemplate.html" %}
+{% block head %}
+{% endblock %}
 
 {% block content %}
    <div>
-      {% for m in movie %}
-         <p>{{m.name}}</p>
-         <p>{{m.release_date}}</p>
-         <p>{{m.actor}}</p>
-         <p>{{m.actress}}</p>
-         <p>{{m.language}}</p>
-         <p>{{m.rating}}</p>
-      {% endfor%}
+      <table class="table table-bordered table-striped ">
+         <thead class="thead-dark">
+            <tr>
+              <td>Movie Name</td>
+              <td>Release Date</td>
+              <td>Actor</td>
+              <td>Actress</td>
+              <td>Language</td>
+              <td>Ratings</td>
+              <td>Update or Delete</td>
+            </tr>
+         </thead>
+         {% for movie in movies %}
+         <tr>
+            <td>{{movie.name}}</td>
+            <td>{{movie.release_date}}</td>
+            <td>{{movie.actor}}</td>
+            <td>{{movie.actress}}</td>
+            <td>{{movie.language}}</td>
+            <td>{{movie.rating}}</td>
+            <td><a class="btn btn-primary" href="/updatingmovie/{{movie.name}}/" role="button">Update</a>
+                <a class="btn btn-primary" href="/deletemovie_result/{{movie.name}}/" role="button">Delete</a></td>
+         </tr>
+         {% endfor %}
+      </table>
    </div>
 {% endblock %}
