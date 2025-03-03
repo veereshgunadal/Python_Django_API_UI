@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+   <title>Get Movie Results Page</title>
+</head>
+<body>
+   <div>
+      <h1 align="center">Movie List</h1>
+      <br>
+      <table>
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Movie Name</td>
+                <td>Release Date</td>
+                <td>Actor</td>
+                <td>Actress</td>
+                <td>Language</td>
+                <td>Rating</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for movie in movies %}
+            <tr>
+                <td>{{movie.id}}</td>
+                <td>{{movie.name}}</td>
+                <td>{{movie.release_date}}</td>
+                <td>{{movie.actor}}</td>
+                <td>{{movie.actress}}</td>
+                <td>{{movie.language}}</td>
+                <td>{{movie.rating}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+   </div>
+</body>
