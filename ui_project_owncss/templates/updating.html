@@ -6,7 +6,7 @@
    <div>
       <h1 align="center">Enter movie name to get details</h1>
       <br>
-      <form action="/updateresult/" method="POST">
+      <form action="/updateresult/{{moviename}}/" method="POST">
         {{form.as_p}}
         <input type = "submit">
       </form>

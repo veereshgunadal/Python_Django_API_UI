@@ -29,7 +29,8 @@ def get_result(request):
         data_obj = Movies.objects.get(name = name)
         res_data = [data_obj,]
         return render(request, 'getresult.html', {'movies': res_data})
-    except:
+    except Exception as e:
+        print(e)
         return redirect("not_found")
     
 def delete(request):
@@ -52,7 +53,7 @@ def updating(request):
     try:
         form = MoviesForm
         name = request.GET.get("name")
-        data_obj = Movies.objects.get(name)
+        data_obj = Movies.objects.get(name = name)
         return render(request, 'updating.html', {'form': form, 'moviename':data_obj.name})
     except Exception as e:
         print(e)
@@ -61,10 +62,12 @@ def updating(request):
 def update_result(request, name):
     try:
         data_obj = Movies.objects.get(name = name)
-        form = MoviesForm(request.POST)
+        form = MoviesForm(request.POST, instance= data_obj)
         if form.is_valid():
             form.save(commit=True)
             return render(request, 'addupdatedelete_result.html', {'action': 'update'})
+        else:
+            print(form.errors)
     except:
         return redirect("not_found")
     

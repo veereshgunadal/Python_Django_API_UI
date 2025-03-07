@@ -28,7 +28,7 @@ urlpatterns = [
     path('update/', views.update),
     path('updating/', views.updating),
     path('updateresult/<str:name>/', views.update_result),
-    path('delete/<str:name>/', views.delete),
+    path('delete/', views.delete),
     path('deleteresult/<str:name>/', views.delete_result),
     path('notfound/', views.not_found, name="not_found")
 ]
