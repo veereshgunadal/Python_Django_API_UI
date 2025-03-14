@@ -1,8 +1,9 @@
 body{
     background-color:aliceblue;
-    background-image:url("/static/wp4951826.jpg");
+    background-image:url("/static/wp4951826.jpg") no-repeat 100%;
     /*background-repeat:no-repeat;*/
-    background-size: cover;
+    background-size: 100% auto;
+    background-repeat: none;
 }
 h1,a,li{
     color:cornsilk

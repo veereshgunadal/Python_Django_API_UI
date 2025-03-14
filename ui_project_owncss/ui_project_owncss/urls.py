@@ -25,6 +25,7 @@ urlpatterns = [
     path('addresult/', views.add_result),
     path('get/', views.get),
     path('getresult/', views.get_result),
+    path('all/', views.all),
     path('update/', views.update),
     path('updating/', views.updating),
     path('updateresult/<str:name>/', views.update_result),

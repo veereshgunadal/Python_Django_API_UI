@@ -18,7 +18,7 @@ def add_result(request):
         form.save(commit=True)
         return render (request, 'addupdatedelete_result.html', {'action':'add movie'})
     else:
-        return render("not_found")
+        return redirect("not_found")
     
 def get(request):
     return render(request, 'get.html')
@@ -29,6 +29,14 @@ def get_result(request):
         data_obj = Movies.objects.get(name = name)
         res_data = [data_obj,]
         return render(request, 'getresult.html', {'movies': res_data})
+    except Exception as e:
+        print(e)
+        return redirect("not_found")
+
+def all(request):
+    try:
+        data_obj = Movies.objects.all()
+        return render(request, 'getresult.html', {'movies': data_obj})
     except Exception as e:
         print(e)
         return redirect("not_found")
