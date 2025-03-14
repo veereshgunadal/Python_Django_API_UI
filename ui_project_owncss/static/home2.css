@@ -1,11 +1,10 @@
 body{
-    background-image: url("/static/wp4951826.jpg") no-repeat 100%;
+    background-image:url("wp4951826.jpg");
     background-size: 100% auto;
     background-repeat: none;
 }
-
 h1,a,li{
-    color:rgb(220, 255, 220)
+    color:white;
 }
 label{
     color:rgb(245, 246, 247);
