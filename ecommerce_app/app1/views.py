@@ -25,7 +25,7 @@ def register_check(request):
         return redirect("login")
     if form.errors:
         print(form.errors)
-        res_data = json.dumps({'errorcode':400, 'errormessage':'please retry'})
+        res_data = json.dumps({'errorcode':400, 'errormessage':'please retry this username already exist'})
         return HttpResponse(res_data, content_type = 'application/json')
     
 def login_check(request):
