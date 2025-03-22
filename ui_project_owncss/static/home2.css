@@ -1,7 +1,6 @@
 body{
-    background-image:url("static/wp4951826.jpg");
+    background-image:url("wp4951826.jpg");
     background-size: 100% auto;
-    background-repeat: none;
 }
 h1,a,li{
     color:white;
@@ -12,11 +11,10 @@ label{
 
 table{
     border:2px solid white;
-    padding:30px;
+    padding:10px;
     /*border-collapse: collapse;*/
     border-radius: 20px;
 }
-
 
 td{
     color:whitesmoke;

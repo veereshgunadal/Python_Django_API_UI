@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+    <div id="heading">
+        <h1 align="left">Orange
+             <span>Home</span>
+             <a href="/product/"><span>Products</span></a>
+             <a href="/login/"><span id="login">{{username}}</span></a> 
+        </h1>
+    </div>  
+</body>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+    <div align="center">
+        <p>you have already account? sign in <br><br>
+           if not create account <a href="/register/">Register</a></p>
+        <form action="/logincheck/" method="get">
+            <label id="username">user name</label>
+            <input for="username" type="text" name="username"><br><br>
+            <label id="password">password</label>
+            <input for="password" type="password" name="password"><br><br>
+            <input type="submit">
+        </form>
+    </div>
+</body>

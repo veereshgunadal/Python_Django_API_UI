@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<head>
+    <title>User register page</title>
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+</head>
+<body>
+    <div align="center">
+        <p>please enter username and password to create account</p>
+        <form action="/registercheck/" method="post">
+            <label id="username">username</label>
+            <input for="username" type="text" name="username"><br><br>
+            <label id="password">password</label>
+            <input for="password" type="password" name="password"><br><br>
+            <input type="submit">
+        </form>
+    </div>
+</body>

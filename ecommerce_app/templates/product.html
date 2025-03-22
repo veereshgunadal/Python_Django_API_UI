@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<head>
+    <title>Product Page</title>
+    <link rel="stylesheet" href="{% static 'product.css' %}">
+</head>
+<body>
+    <div>
+        <h1 id="heading">Orange 
+            <span>Products</span>
+        </h1>
+    </div>
+    <table align="center">
+        <thead>
+            <td>ProductName</td>
+            <td>Price</td>
+            <td>Category</td>
+            <td>Buy or Add to Cart</td>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.category}}</td>
+                <td><a href="#">buy</a> <br> <a href="#">add to cart</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>

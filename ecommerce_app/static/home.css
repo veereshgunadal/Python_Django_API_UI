@@ -1,0 +1,16 @@
+#heading{
+    background-color:aqua
+}
+span{
+    font-size: 60%;
+}
+
+#login{
+    border: 2px solid red;
+    border-radius: 5px;
+    margin-left: 70%;
+}
+
+a{
+    color:black;
+}
